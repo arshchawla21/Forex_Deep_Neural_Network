@@ -2,6 +2,8 @@
 
 This repository contains a deep neural network (DNN) model for predicting forex commodity price movements and a trading bot that uses the model with the OANDA API for live trading. The bot is designed to trade forex pairs such as USD/JPY, leveraging historical candlestick data and machine learning to make informed trading decisions.
 
+_**Note:** This project is for educational purposes only, and caution should be exercised when/if live trading._
+
 ---
 
 ## Table of Contents
