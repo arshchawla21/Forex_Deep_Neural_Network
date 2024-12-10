@@ -1,0 +1,10 @@
+window = 48
+df = data.copy()
+df['dir'] = np.where(df['returns'] > 0, 1, 0)
+df['sma_12'] = df['returns'].rolling(12).mean()
+df['sma_26'] = df['returns'].rolling(26).mean()
+df['vol_12'] = df['volume'].rolling(12).mean()
+df['vol_26'] = df['volume'].rolling(26).mean()
+df['boll'] = (df['returns'] - df['returns'].rolling(window).mean()) / df['returns'].rolling(window).std()
+df['min'] = (df['returns'] - df['returns'].rolling(window).min()) / df['returns'].rolling(window).min()
+df['max'] = (df['returns'].rolling(window).max() - df['returns']) / df['returns'].rolling(window).max()
