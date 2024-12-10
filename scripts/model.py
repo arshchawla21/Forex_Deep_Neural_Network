@@ -184,8 +184,14 @@ model.fit(x = train_s[cols], y = train["dir"], epochs = 100, verbose = True, val
 model.evaluate(x = train_s[cols], y = train["dir"])
 # %%
 ''' Visualise model predictions '''
+# Predicting results using the model
 pred = model.predict(train_s[cols])
-plt.hist(pred, bins=50)
+
+# Plotting the distribution of predictions
+plt.hist(pred, bins=50, color='skyblue', edgecolor='black')
+plt.title("Distribution of Predictions Across Dataset")
+plt.xlabel("Predicted Values")
+plt.ylabel("Frequency")
 plt.show()
 # %%
 ''' Out-Sample Predicition and Backtesting '''
